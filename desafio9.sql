@@ -1,8 +1,8 @@
 SELECT
-ContactName AS 'Nome completo',
-COUNT(OrderDate) AS 'Total de pedidos'
-FROM w3schools.orders AS c
-LEFT JOIN w3schools.customers AS o
-ON c.CustomerID = o.CustomerID
-GROUP BY ContactName
+CONCAT(`FirstName`, ' ', `LastName`) AS 'Nome completo',
+COUNT(*) AS 'Total de pedidos'
+FROM w3schools.employees AS o
+LEFT JOIN w3schools.orders AS e
+ON o.EmployeeID = e.EmployeeID
+GROUP BY FirstName
 ORDER BY `Total de pedidos`;

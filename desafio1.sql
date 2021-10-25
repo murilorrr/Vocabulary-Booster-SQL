@@ -4,4 +4,5 @@ SELECT COUNTRY_NAME AS 'País',
     ELSE 'não incluído'
 END)
 AS 'Status Inclusão'
-FROM hr.countries;
+FROM hr.countries
+ORDER BY COUNTRY_NAME;

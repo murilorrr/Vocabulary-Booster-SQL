@@ -7,4 +7,5 @@ RIGHT JOIN w3schools.orders AS o
 ON c.CustomerID = o.CustomerID
 LEFT JOIN w3schools.shippers AS s
 ON s.ShipperID = o.ShipperID
+WHERE ShipperName NOT IN('Federal Shipping')
 ORDER BY `Nome de contato`, ShipperName, OrderDate;

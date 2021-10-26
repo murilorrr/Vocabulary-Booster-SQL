@@ -1,7 +1,7 @@
 SELECT
-c1.CustomerName AS 'Nome',
+c1.ContactName AS 'Nome',
 c2.Country AS 'País',
-COUNT(c1.Country) - 1
+COUNT(c1.Country) - 1 AS 'Número de compatriotas'
 FROM
   w3schools.customers AS c1,
   w3schools.customers AS c2
